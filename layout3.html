@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Layout3</title>
+      <style>
+         body {
+         background-color: #EDEDED;
+         font-family: Arial, Helvetica, sans-serif;
+         }
+         main > * {
+         background:silver;
+         }    
+         main{
+         padding: 10px 10px;
+         margin:20px auto 0 auto;
+         min-height: 600px;
+         width: 960px;
+         background: white;
+         display: grid;
+         grid-gap: 20px;
+         grid-template-columns: repeat(12,1fr);
+         grid-template-rows: 80px 4fr 5fr 30px;
+         grid-gap: 20px;
+         }
+         .logo{
+         grid-row:1 / 2; grid-column: 1 / span 3; 
+         }
+         nav{grid-row:1 / 2; grid-column: 7 / span 6;
+         align-self: center; 
+         display: flex;
+        }
+         div{
+         padding:10px 35px;
+         }
+         .feat-prod-info{grid-row: 2 / 3; grid-column: 1 / span 12;
+         padding: 50px;
+         }
+         h1{
+         font-size: 2.5em;
+         }
+         .inside-container{grid-row: 3 / 4; grid-column: 1 / span 12;
+         display: grid;
+         grid-template-columns: repeat(12,1fr);
+         grid-template-rows: 0.5fr 2fr 2fr;
+         grid-gap: 10px;
+         background-color: white;
+         }
+         footer{grid-row: 4 / 5; grid-column: 1 / span 12;
+         display:flex;
+         justify-content: center;
+         align-items: center;}
+         .title1{background-color: silver;
+         grid-row: 1 / 2; grid-column: 1 / span 3;  }
+         .title2{background-color: silver;
+         grid-row: 1 / 2; grid-column: 7 / span 3;}
+         .bp1{background-color: silver;
+         grid-row: 2 / 3; grid-column: 1 / span 6;}
+         .fp1{background-color: silver;
+         grid-row: 2 / 3; grid-column: 7 / span 3;}  
+         .fp2{background-color: silver;
+         grid-row: 2 / 3; grid-column: 10 / span 3;}  
+         .bp2{background-color: silver;
+         grid-row: 3 / 4; grid-column: 1 / span 6;}    
+         .fp3{background-color: silver;
+         grid-row: 3 / 4; grid-column: 7 / span 3;}
+         .fp4{background-color: silver;
+         grid-row: 3 / 4; grid-column: 10 / span 3;}    
+      </style>
+   </head>
+   <body>
+      <main>
+         <section class="logo">Company Logo</section>
+         <nav>
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+         </nav>
+         <section class="feat-prod-info">
+            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+               labore et dolore magna aliqua.
+            </h1>
+            <h2>Pretium fusce id velit ut tortor pretium viverra. 
+               Elementum nisi quis eleifend quam adipiscing vitae proin sagittis.
+            </h2>
+         </section>
+         <section class="inside-container">
+            <section class="title1">Title</section>
+            <section class="title2">Title</section>
+            <section class="bp1">BlogPost1</section>
+            <section class="fp1">FeaturedProduct1</section>
+            <section class="fp2">FeaturedProduct2</section>
+            <section class="bp2">BlogPost2</section>
+            <section class="fp3">FeaturedProduct3</section>
+            <section class="fp4">FeaturedProduct4</section>
+         </section>
+         <footer>Copyright Notice</footer>
+      </main>
+   </body>
+</html>

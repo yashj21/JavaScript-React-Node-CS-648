@@ -1,0 +1,5 @@
+body                        {font-family: $font-body, $font-style;
+                            font-size:1em;line-height:2em;
+                            background:url('#{$image-loc}bg.gif') $background repeat-x;
+                            @include dimensions(0px);}
+main                        {width:940px;@include set-margin(0 auto);padding:0 10px;}

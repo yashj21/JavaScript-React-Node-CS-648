@@ -1,0 +1,13 @@
+#headline         {@include dimensions(100%, 130px);background:#F25C43;
+                   text-align:center;@include set-margin(0 auto);}
+h1                {color:$background;font-size:2.5em;font-weight:100;padding-top:50px;
+}
+#content          {width:940px;@include set-margin(20px auto);
+h3                {color:$h3-color;font-size:2em;font-weight:400;}
+#products         {width:460px;float:left;
+img               {float:left;@include set-margin(0px 20px 0px 0px);}
+article           {@include set-margin(0px 0px 40px 0px);}
+h4                {line-height:1em;}
+}
+#testimonials     {width:460px;float:right;}
+}

@@ -4,10 +4,10 @@ footer                      {width:100%;height:120px;background:#30353D;text-ali
 .social-media               {@include set-margin(0 auto);width:165px;  @include social-media();
 div           {
                 float:left;margin-right:5px;
-                &:first-of-type{    background:url('#{$image-loc}social-media.png') 0 0;}
-                &:nth-of-type(2){background:url('#{$image-loc}social-media.png') -38px 0;}
-                &:nth-of-type(3){background:url('#{$image-loc}social-media.png') -76px 0;}
-                &:nth-of-type(4){background:url('#{$image-loc}social-media.png') -114px 0;}
+                &:first-of-type{    background:url('#{$image-loc}social-media.png') $p 0;}
+                &:nth-of-type(2){background:url('#{$image-loc}social-media.png') ($p - ($i * 38)) 0;}
+                &:nth-of-type(3){background:url('#{$image-loc}social-media.png') ($p - ($i + 1) * 38) 0;}
+                &:nth-of-type(4){background:url('#{$image-loc}social-media.png') ($p - ($i + 2) * 38) 0;}
             }
 a             {display:block;@include dimensions(36px, 36px);text-indent:-9999px;}
 }

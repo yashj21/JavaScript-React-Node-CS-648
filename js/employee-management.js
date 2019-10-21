@@ -58,9 +58,10 @@ function displayInitData(){
     while (table.rows.length > 1) {
       table.deleteRow(1);
     }
-  
-    for(var i = 1; i<employeeList.length;i++) {
-        table.insertRow();
+    
+    for(var i = 0; i<employeeList.length;i++) {
+        var tr =table.insertRow();
+        
         for(var a = 0; a<3;a++){
             var cell = table.rows[i].insertCell();
             cell.textContent =employeeList[i][a];
@@ -72,11 +73,14 @@ function displayInitData(){
         button.setAttribute("id",employeeList[i][2]);
         deletecell.appendChild(button);
     }
-    for(var i = 1; i<employeeList.length;i++){
+    for(var i = 0; i<employeeList.length;i++){
         $(employeeList[i][2]).addEventListener("click",deleteEmployee);
     }
+    updateCount();
 }
-
+function updateCount(){
+    $("employeeCount").innerHTML= employeeList.length;
+}
   loadInitData();    
 window.addEventListener("load", function(){
     displayInitData();

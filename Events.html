@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery Events</title>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script>
+       $(function() {
+            $('#btn1').click(function() {
+                window.alert("Button 1 has been clicked!!!");
+            });
+            
+            $('#button2').bind('click', function() {
+                window.alert("Button 2 has been clicked!!!");
+            });
+            
+            $('#button3').on('click', function() {
+                window.alert("Button 3 has been clicked!!!");
+            });
+        
+            $('.button').on("click", function() {
+                alert('Buttons are clicked');
+            });
+        
+            $('div#mouseMovement').css({
+                'height': '400px',
+                'width': '400px'
+            });
+        
+            $("div#mouseMovement").mouseenter(function() {
+                alert("Entered Div");
+                $('#vspan').html("Entered Div");
+            });
+        
+            $("div#mouseMovement").mouseleave(function() {
+                alert("Left Div");
+                $('#vspan').html("Left Div");
+            });
+        
+            $("div#mouseMovement").on("click", function() {
+                alert("Clicked Div");
+                $('#vspan').html("Clicked Div");
+            });
+        
+            $('a').click(function(event) {
+                event.preventDefault();
+                $('a').css({
+                    'color': 'red'
+                });
+                alert("clicked: " + event.target.nodeName);
+            });
+        
+            $(window).resize(function() {
+                $('div#div2').text("Width: " + $(window).width() + " , Height: " + $(window).height())
+            });
+        
+            $('#focus').focusin(function() {
+                $('#focus').css({
+                    'background-color': '#929CA4'
+                })
+            });
+            $('#focus').focusout(function() {
+                $('#focus').css({
+                    'background-color': 'white'
+                })
+            });
+        
+            $("#form1").submit(function(event) {
+                var isValid = true;
+                var name = $('#name').val().trim();
+                var email = $('#email').val().trim();
+                if (name == '') {
+                    alert('Please enter the name!');
+                    $('#name').css({
+                        'border-color': 'red'
+                    });
+                }
+                if (email == '') {
+                    alert('Please enter the email!');
+                    $('#email').css({
+                        'border-color': 'red'
+                    });
+                }
+                if (name != '' && email != '') {
+                    $('#name').css({
+                        'border-color': 'green'
+                    });
+                    $('#email').css({
+                        'border-color': 'green'
+                    });
+                }
+                event.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btn1">Clicke me</button><br><br>
+    <button id="button2">Bind</button><br><br>
+    <button id="button3">onclick</button><br><br>
+    <button class="button">Button 4</button><br><br>
+    <button class="button">Button 5</button><br><br>
+    <div id="mouseMovement">
+    </div>
+    <span id="vspan"></span><br>
+    <a href="modulemedia.com"> Module Media</a><br>
+    <div id="div2"></div><br> Input: <input id="focus" value="" type=text><br>
+    <br>
+
+    <form id="form1">
+        Name: <input id="name" type=text><br> <br> Email: <input id="email" type="text"><br><br>
+        <input id="submit" type="submit" value="Submit"><br>
+    </form>
+</body>
+</html>

@@ -42,12 +42,7 @@ class Product extends  React.Component{
                     name: "Bean Bag",
                     category: "Test",
                     price: "100"}],
-            newDataForm: {
-                category: '',
-                name: '',
-                price: '',
-                imageURL: ''
-            },
+
             filterText:''
         };
     }

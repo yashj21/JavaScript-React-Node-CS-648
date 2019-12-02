@@ -24,11 +24,12 @@ class ProductTable extends Component {
 
 
             let rows = [
-                <tr>
+                <thead class="thead-dark"><tr>
                     <th>Product Name</th>
                     <th>Category</th>
                     <th>Price</th>
-                </tr>
+                    <th></th>
+                </tr></thead>
             ];
 
             for(let i = 0; i<listOfProducts.length; i++){
@@ -44,7 +45,7 @@ class ProductTable extends Component {
     render(){
         return(
             <div class="col-md-4">
-                <table  class="table table-sm table-striped">
+                <table  class="table table-striped ">
                     {this.renderTableRows(this.props.product)}
                 </table>
             </div>

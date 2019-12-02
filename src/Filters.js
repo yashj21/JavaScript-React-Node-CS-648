@@ -22,11 +22,12 @@ class Filters extends React.Component{
 
 
     render() {
-      return ( <form >
-            <label>
-                <input type="text" name="filterText" onChange={this.handleChange}/><br />
+      return ( <div class="col-md-4"><form >
+                <label>
+                <input  type="text" name="filterText" onChange={this.handleChange} placeholder="Search.."/><br />
                 </label>
-        </form>)
+        </form>
+      </div>)
 
 
     }

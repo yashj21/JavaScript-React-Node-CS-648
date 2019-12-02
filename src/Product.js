@@ -14,26 +14,33 @@ class Product extends  React.Component{
                 {
                     id:0,
                     name: "Clarinet",
+                    category: "Test",
                     price: "459.99"},
                 {
                     id:1,
                     name: "Cello",
+                    category: "Test1",
                     price: "5000"},
+
                 {
                     id:2,
                     name: "Fortepiano",
+                    category: "Test",
                     price: "11000"},
                 {
                     id:3,
                     name: "Chaise Lounge",
+                    category: "Test",
                     price: "799"},
                 {
                     id:4,
                     name: "Dining Table",
+                    category: "Test1",
                     price: "1300"},
                 {
                     id:5,
                     name: "Bean Bag",
+                    category: "Test",
                     price: "100"}],
             newDataForm: {
                 category: '',
@@ -68,7 +75,7 @@ class Product extends  React.Component{
     render() {
 
 
-        return(<div><h1>My Inventory</h1>
+        return(<div class="container-fluid"><h1 class="col-md-4">My Inventory</h1>
             <div> <Filters onFilter={this.handleFilter}/>
                 <ProductTable product = {this.state.product} onDestroy={this.handleDestroy} filterText={this.state.filterText}/>
                 <ProductForm onSave={this.handleSave} onDestroy={this.handleDestroy}/></div>

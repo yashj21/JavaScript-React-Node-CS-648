@@ -1,0 +1,61 @@
+	.ui-tabs {display:flex;}
+	.ui-tabs-vertical { width: 55em; }
+	.ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+	.ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+	.ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+	.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; }
+	.ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}
+	.cycle-slideshow{width: 100%;
+		height: 100%;
+    min-width: 200px;
+    max-width: 500px;
+    margin: 10px 27%;
+    padding: 0;
+	position: relative;
+	
+    background: url(http://malsup.github.com/images/spinner.gif) 50% 50% no-repeat;
+	}
+	.cycle-prev{
+		position: absolute;
+    top: 0;
+    width: 30%;
+    opacity: 1;
+    filter: alpha(opacity=0);
+    z-index: 800;
+    height: 100%;
+    cursor: pointer;	
+	left: 0;
+    background: url(http://malsup.github.com/images/left.png) 50% 50% no-repeat;}
+	.cycle-next{
+		position: absolute;
+    top: 0;
+    width: 30%;
+    opacity: 1;
+    filter: alpha(opacity=0);
+    z-index: 800;
+    height: 100%;
+    cursor: pointer;right: 0;
+    background: url(http://malsup.github.com/images/right.png) 50% 50% no-repeat;
+}
+
+#sidebar {
+
+  background-color: #efefef;
+  margin: 45px 0 30px 0;
+  padding: 5px 10px;
+  float: right !important;
+  border-bottom: 3px solid #7fc558;
+  opacity: 0.75;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;/* float right for a right aligned sidebar */
+  }
+  #sidebar:hover {
+	opacity: 1.0;
+  }
+  #footer {
+	width: 940px;
+	clear:both;
+	background-color: #ccc;
+	margin-top: 100px;
+  }

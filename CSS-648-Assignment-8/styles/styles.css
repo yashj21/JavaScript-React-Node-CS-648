@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid cadetblue;
+    border-radius: 4px;
+    resize: vertical;
+}
+input[type=button] {
+    background-color: cadetblue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    margin-top: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=button]:hover {
+    background-color: cadetblue;
+}

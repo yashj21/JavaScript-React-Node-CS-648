@@ -1,0 +1,40 @@
+@include break(959px) {
+    main 						{width:768px;}
+    figure						{@include dimensions(inherit, 140px);float:none;background-position:center;}
+    nav 						{@include dimensions(inherit, 50px);float:none;text-align:center;}
+    nav ul						{@include set-margin(0px);}
+    nav ul li					{font-size:1em;@include set-margin(0px 10px 0px 0px);}
+    header h1 					{font-size:3em;}
+    header h2 					{font-size:1.5em;}
+    #content 					{width:inherit;}
+    #content #products,
+    #content #testimonials 		{width:46%;@include set-margin(0 2%);}
+    }
+    
+    @include break(767px) {
+    main 						{width:460px;}
+    nav ul li					{font-size:0.8em;@include set-margin(0px 5px);}
+    header h1					{font-size:2em;}
+    header h2 					{font-size:1em;}
+    header img			 		{@include set-margin(0px 0px 100px 0px);}
+    header h3					{font-size:1.5em;}
+    #headline h1 				{font-size:2em;padding-top:50px;}
+    #content #products,
+    #content #testimonials 		{width:96%;@include set-margin(0 2%);float:none;}
+    }
+    
+    @include break(459px) {
+    main 						{width:300px;}
+    figure						{background-size:contain;height:100px;}
+    nav							{margin-bottom:40px !important;}
+    select              		{width:95%;}
+    #headline h1 				{font-size:1.5em;padding-top:30px;}
+    header img			 		{@include set-margin(0px 0px 80px 0px);}
+    header h1:first-child		{font-size:1.4em;@include set-margin(0px 0px 20px 0px);}
+    header h2					{font-size:1.4em;}
+    header h3					{color:#FFF;font-size:1em;}
+    #content h3					{font-size:1.6em;}
+    .greybar, article img		{display:none;}
+    footer						{text-align:center;}
+    footer p, footer img 		{float:none;margin:0;}
+    }

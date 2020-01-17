@@ -1,0 +1,43 @@
+@mixin genericlist (){
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin clearfix {
+    &:before, &:after {
+        content: '';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin break($length) {
+        @media screen and (max-width: $length) {
+            @content;
+        }
+}
+
+@mixin social-media {
+    @each $media in $social-media-div-element {
+      $index: index($social-media-div-element, $media);
+      div.#{$media} {
+        background: nth($social-media-background, $index);
+      }
+    }
+  }
+  
+  @mixin dimensions($x: inherit, $y: inherit) {
+    width: $x;
+    height: $y;
+  }
+  
+  @mixin set-margin($args...){
+    margin: $args;
+  }
+@mixin footerImg($img:url('../images/social-media.png'),$x:0,$y:0){
+    background:url($img);
+    background-position: $x $y;
+}

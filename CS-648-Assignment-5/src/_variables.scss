@@ -1,0 +1,16 @@
+$background:     #FFF;
+$nav-color:      red;
+$h3-color:       #666;
+$font-body:      'Roboto';
+$font-style:     sans-serif;
+$image-loc:      '../images/';
+
+$social-media-div-element: "one", "two", "three", "four";
+$one: url(#{$image-loc}/social-media.png) 0 0;
+$two: url(#{$image-loc}/social-media.png) -38px 0;
+$three: url(#{$image-loc}/social-media.png) -76px 0;
+$four: url(#{$image-loc}/social-media.png) -114px 0;
+$social-media-background: $one, $two, $three, $four;
+
+$p:0px;
+$i:1;

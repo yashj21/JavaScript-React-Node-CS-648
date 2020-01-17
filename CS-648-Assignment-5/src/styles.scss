@@ -1,0 +1,14 @@
+@import "variables"; 
+@import "mixins";
+
+/* BASIC STYLES */
+@import "base"; 
+/* NAVIGATION */
+@import "navigation";
+/* HEADER */
+@import "header";
+/* CONTENT */
+@import "content";
+/* FOOTER */
+@import "footer";
+/* MEDIA QUERIES */
